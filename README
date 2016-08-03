@@ -1,0 +1,32 @@
+DESCRIPTION
+	$script - A tool that create, audit and update connection file.
+
+USAGE
+	$script <dir> [option]
+
+OPTION
+	Required:
+	<dir> 						This is the conn/ directory in your workarea
+
+	Optional:
+	-excel	<.xlsx or .xls conn file>		connection file as input
+	-v	<verilog file>				verilog file as input
+	-module	<verilog module name>			module name in the verilog file
+	-sheet	<excel sheet name>			sheet name in the connection file
+	-show	<sheet>					aids to show a preview of sheet names
+	-audit	<port|type>				enables audit preference
+	-update						enables connection file update based from the verilog file reference
+	-h|help						display help
+
+EXAMPLES
+	 ##sample1 : invoked tool without arguments, automatically search for excel and verilog files in PWD
+	  $tool
+	 
+	 ##sample2 : with -dir argument, automatically search for excel and verilog files
+	  $tool -dir $dir
+	 
+	 ##sample3 : will accept hard input excel file while verilog remains automatically searched
+	  $tool -excel $snowx1
+	 
+SCOPE AND LIMITATIONS
+	1. Supports connection file audit for different projects and different directories.
